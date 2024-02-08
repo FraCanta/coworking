@@ -20,7 +20,7 @@ const SplashScreen = ({ finishLoading }) => {
         delay: 0,
         opacity: 1,
         translateX: [-100, 0], // aggiunto translateX con valore negativo        duration: 1000,
-        easing: "easeInOutExpo",
+        easing: "spring",
         transformOrigin: "50% 50%",
       })
       .add({
@@ -28,7 +28,7 @@ const SplashScreen = ({ finishLoading }) => {
         delay: 0,
         opacity: 1,
         translateX: [100, 0],
-        easing: "easeInOutExpo",
+        easing: "spring",
       })
       .add({
         targets: "#per",
@@ -53,39 +53,16 @@ const SplashScreen = ({ finishLoading }) => {
         easing: "easeInOutExpo",
       })
       .add({
-        targets: "#logo1",
+        targets: "#logo1, #logo2, #payoff",
         delay: 0,
         opacity: 1,
         translateX: 0,
         duration: 1000,
         easing: "easeInOutExpo",
       })
-      .add({
-        targets: "#logo2",
-        delay: 2,
-        opacity: 1,
-        translateX: 0,
-        duration: 1200,
-        easing: "easeInOutExpo",
-      })
 
       .add({
-        targets: "#payoff",
-        delay: 100,
-        opacity: 1,
-        duration: 1000,
-        easing: "easeInOutExpo",
-      })
-
-      .add({
-        targets: "#payoff",
-        delay: 100,
-        opacity: 0,
-        duration: 3000,
-        easing: "easeInOutExpo",
-      })
-      .add({
-        targets: "#logo",
+        targets: "#logo, #payoff",
         delay: 5,
         scale: 0,
         opacity: 0,
