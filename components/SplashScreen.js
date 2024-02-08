@@ -37,11 +37,12 @@ const SplashScreen = ({ finishLoading }) => {
         duration: 1000,
         easing: "easeInOutExpo",
       })
+
       .add({
         targets: "#payoff",
-        delay: 10,
+        delay: 100,
         opacity: 0,
-        duration: 1000,
+        duration: 3000,
         easing: "easeInOutExpo",
       })
       .add({
@@ -87,7 +88,7 @@ const SplashScreen = ({ finishLoading }) => {
           FACTORY
         </span>
       </div>
-      <p id="payoff" className="opacity-0">
+      <p id="payoff" className="opacity-0 text-[1.25rem] md:text-[1.8rem]">
         Agenzia creativa di incontri x brands
       </p>
     </div>
