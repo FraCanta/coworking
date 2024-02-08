@@ -5,7 +5,7 @@ import BackButton from "./BackButton";
 
 const i18nNamespaces = ["about", "test"];
 
-async function About({ params: { locale } }) {
+async function Factory({ params: { locale } }) {
   const { t, resources } = await initTranslations(locale, i18nNamespaces);
   return (
     <TranslationsProvider
@@ -14,11 +14,10 @@ async function About({ params: { locale } }) {
       resources={resources}
     >
       <main>
-        <h1>{t("about_header")}</h1>
-        <BackButton />
+        <h1>Factory</h1>
       </main>
     </TranslationsProvider>
   );
 }
 
-export default About;
+export default Factory;

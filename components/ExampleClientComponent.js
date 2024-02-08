@@ -6,5 +6,5 @@ export default function ExampleClientComponent() {
   const { t } = useTranslation();
   const userName = "Francesca";
 
-  return <h3>Buona giornata, {userName}!</h3>;
+  return <h3>{t("subheader")}</h3>;
 }
