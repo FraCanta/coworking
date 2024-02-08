@@ -88,7 +88,10 @@ const SplashScreen = ({ finishLoading }) => {
           FACTORY
         </span>
       </div>
-      <p id="payoff" className="opacity-0 text-[1.25rem] md:text-[1.8rem]">
+      <p
+        id="payoff"
+        className="opacity-0 text-[1.25rem] md:text-[1.8rem] text-white"
+      >
         Agenzia creativa di incontri x brands
       </p>
     </div>
