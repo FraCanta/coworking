@@ -21,7 +21,7 @@ const SplashScreen = ({ finishLoading }) => {
         opacity: 1,
         duration: 600,
         translateX: [-100, 0], // aggiunto translateX con valore negativo        duration: 1000,
-        easing: "easeInOutExpo",
+        easing: "easeInOutSine",
       })
       .add({
         targets: "#per2",
@@ -30,13 +30,13 @@ const SplashScreen = ({ finishLoading }) => {
         duration: 600,
 
         translateX: [100, 0],
-        easing: "easeInOutExpo",
+        easing: "easeInOutSine",
       })
       .add({
         targets: "#per",
         delay: 0,
         rotate: "45deg",
-        duration: 600,
+        duration: 700,
         easing: "easeInOutExpo",
       })
       .add({
@@ -45,13 +45,13 @@ const SplashScreen = ({ finishLoading }) => {
         opacity: 0,
         rotate: "2turn",
         duration: 600,
-        easing: "easeInOutExpo",
+        easing: "easeInOutSine",
       })
       .add({
         targets: ["#icona, #payoff"],
         opacity: 1,
-        duration: 1000,
-        easing: "easeInOutExpo",
+        duration: 500,
+        easing: "easeInOutSine",
         delay: anime.stagger(200),
       })
 
@@ -59,20 +59,29 @@ const SplashScreen = ({ finishLoading }) => {
         targets: ["#logo1, #logo2 "],
         opacity: 1,
         translateX: 0,
-        duration: 600,
-        easing: "easeInOutExpo",
+        duration: 500,
+        easing: "easeInOutSine",
         delay: anime.stagger(300),
       })
 
       .add({
-        targets: "#logo, #payoff",
-        delay: anime.stagger(300),
+        targets: "#payoff",
+        delay: 0,
+        scale: 0,
+        opacity: 0,
+
+        duration: 500,
+        easing: "easeInOutSine",
+      })
+      .add({
+        targets: "#logo",
+        delay: 0,
         scale: 0,
         opacity: 0,
         translateY: -20,
         translateX: -10,
-        duration: 1300,
-        easing: "easeInOutExpo",
+        duration: 600,
+        easing: "easeInOutSine",
       });
   };
 
