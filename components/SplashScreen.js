@@ -33,6 +33,13 @@ const SplashScreen = ({ finishLoading }) => {
       .add({
         targets: "#payoff",
         delay: 100,
+        opacity: 1,
+        duration: 1000,
+        easing: "easeInOutExpo",
+      })
+      .add({
+        targets: "#payoff",
+        delay: 10,
         opacity: 0,
         duration: 1000,
         easing: "easeInOutExpo",
@@ -68,19 +75,21 @@ const SplashScreen = ({ finishLoading }) => {
       /> */}
       <div className="flex" id="logo">
         <span
-          className={`${myFont.className} text-[200px] text-[#368B90] opacity-0`}
+          className={`${myFont.className} text-8xl lg:text-[200px] text-[#368B90] opacity-0`}
           id="logo1"
         >
           CO
         </span>
         <span
-          className={`${myFont.className} text-[200px] text-[#bb5471] opacity-0`}
+          className={`${myFont.className} text-8xl lg:text-[200px] text-[#bb5471] opacity-0`}
           id="logo2"
         >
           FACTORY
         </span>
       </div>
-      <p id="payoff">Agenzia creativa di incontri x brands</p>
+      <p id="payoff" className="opacity-0">
+        Agenzia creativa di incontri x brands
+      </p>
     </div>
   );
 };
