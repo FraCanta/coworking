@@ -61,7 +61,7 @@ const SplashScreen = ({ finishLoading }) => {
         translateX: 0,
         duration: 500,
         easing: "easeInOutSine",
-        delay: anime.stagger(300),
+        delay: anime.stagger(400),
       })
 
       .add({
@@ -71,6 +71,14 @@ const SplashScreen = ({ finishLoading }) => {
         opacity: 0,
 
         duration: 500,
+        easing: "easeInOutSine",
+      })
+      .add({
+        targets: "#logo",
+        delay: 0,
+        scale: 1.25,
+        opacity: 0,
+        duration: 600,
         easing: "easeInOutSine",
       })
       .add({
