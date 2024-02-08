@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
     <div className=" mx-auto w-full px-2 sm:px-20">
       <div className="mx-2 px-2 md:mx-10">
-        <div className="flex items-center justify-between py-8 md:justify-start md:space-x-10">
+        <div className="flex items-center justify-between py-6 md:py-8 md:justify-start md:space-x-10">
           <div className="flex flex-1 justify-start lg:w-0">
             <Link href="/">
               <Image
@@ -19,7 +19,7 @@ const Navbar = () => {
                 alt="logo"
                 width={200}
                 height={200}
-                className="w-[100px] h-[100px] md:w-[200px] md:h-[200px]"
+                className="w-[100px]  md:w-[200px] "
               />
             </Link>
           </div>
