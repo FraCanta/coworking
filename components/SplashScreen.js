@@ -19,56 +19,59 @@ const SplashScreen = ({ finishLoading }) => {
         targets: "#per1",
         delay: 0,
         opacity: 1,
+        duration: 600,
         translateX: [-100, 0], // aggiunto translateX con valore negativo        duration: 1000,
-        easing: "spring",
-        transformOrigin: "50% 50%",
+        easing: "easeInOutExpo",
       })
       .add({
         targets: "#per2",
         delay: 0,
         opacity: 1,
+        duration: 600,
+
         translateX: [100, 0],
-        easing: "spring",
+        easing: "easeInOutExpo",
       })
       .add({
         targets: "#per",
         delay: 0,
         rotate: "45deg",
+        duration: 600,
         easing: "easeInOutExpo",
       })
       .add({
-        targets: "#per1",
+        targets: "#per",
         delay: 0,
         opacity: 0,
-        translateY: [-100], // aggiunto translateY con valore negativo
-        duration: 1000,
+        rotate: "2turn",
+        duration: 600,
         easing: "easeInOutExpo",
       })
       .add({
-        targets: "#per2",
-        delay: 0,
-        opacity: 0,
-        translateY: [100], // aggiunto translateY con valore positivo
+        targets: ["#icona, #payoff"],
+        opacity: 1,
         duration: 1000,
         easing: "easeInOutExpo",
+        delay: anime.stagger(200),
       })
+
       .add({
-        targets: "#logo1, #logo2, #payoff",
-        delay: 0,
+        targets: ["#logo1, #logo2 "],
         opacity: 1,
         translateX: 0,
-        duration: 1000,
+        duration: 600,
         easing: "easeInOutExpo",
+        delay: anime.stagger(300),
       })
 
       .add({
         targets: "#logo, #payoff",
-        delay: 5,
+        delay: anime.stagger(300),
         scale: 0,
         opacity: 0,
         translateY: -20,
         translateX: -10,
-        duration: 1000,
+        duration: 1300,
         easing: "easeInOutExpo",
       });
   };
@@ -81,10 +84,10 @@ const SplashScreen = ({ finishLoading }) => {
 
   return (
     <div
-      className="flex h-screen items-center justify-center flex-col overflow-hidden relative"
+      className="flex h-screen items-center justify-center flex-col overflow-hidden "
       isMounted={isMounted}
     >
-      <div className="flex" id="logo">
+      <div className="flex relative" id="logo">
         <span
           className={`${myFont.className} text-8xl md:text-[180px] lg:text-[200px] text-[#368B90] opacity-0`}
           id="logo1"
@@ -105,7 +108,7 @@ const SplashScreen = ({ finishLoading }) => {
         Agenzia creativa di incontri{" "}
         <span>
           <Image
-            id="payoff"
+            id="icona"
             src={Icona}
             alt=""
             width={20}
