@@ -14,7 +14,13 @@ const Navbar = () => {
         <div className="flex items-center justify-between py-8 md:justify-start md:space-x-10">
           <div className="flex flex-1 justify-start lg:w-0">
             <Link href="/">
-              <Image src={Logo} alt="logo" width={200} height={200} />
+              <Image
+                src={Logo}
+                alt="logo"
+                width={200}
+                height={200}
+                className="w-[100px] h-[100px] md:w-[200px] md:h-[200px]"
+              />
             </Link>
           </div>
 
