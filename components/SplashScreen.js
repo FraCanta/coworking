@@ -43,16 +43,16 @@ const SplashScreen = ({ finishLoading }) => {
         targets: "#per",
         delay: 0,
         opacity: 0,
-        rotate: "2turn",
-        duration: 600,
+        rotate: "+=2turn",
+        duration: 800,
         easing: "easeInOutSine",
       })
       .add({
-        targets: ["#icona, #payoff"],
+        targets: "#payoff, #icona",
         opacity: 1,
-        duration: 500,
+        duration: 1200,
         easing: "easeInOutSine",
-        delay: anime.stagger(200),
+        delay: 0,
       })
 
       .add({
@@ -61,24 +61,24 @@ const SplashScreen = ({ finishLoading }) => {
         translateX: 0,
         duration: 500,
         easing: "easeInOutSine",
-        delay: anime.stagger(400),
+        delay: 0,
       })
 
       .add({
         targets: "#payoff",
-        delay: 0,
+        delay: 500,
         scale: 0,
         opacity: 0,
 
-        duration: 500,
+        duration: 800,
         easing: "easeInOutSine",
       })
       .add({
         targets: "#logo",
-        delay: 0,
+        delay: 100,
         scale: 1.25,
         opacity: 0,
-        duration: 600,
+        duration: 500,
         easing: "easeInOutSine",
       })
       .add({
@@ -88,7 +88,7 @@ const SplashScreen = ({ finishLoading }) => {
         opacity: 0,
         translateY: -20,
         translateX: -10,
-        duration: 600,
+        duration: 500,
         easing: "easeInOutSine",
       });
   };
