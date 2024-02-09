@@ -106,12 +106,17 @@ a {
 
 @media screen and (max-width: 768px) {
   .bg-blur {
-    -webkit-filter: blur(120px); /* Ridotto il valore del blur */
-    filter: blur(120px); /* Ridotto il valore del blur */
+    -webkit-filter: blur(180px); /* Ridotto il valore del blur */
+    filter: blur(180px); /* Ridotto il valore del blur */
   }
 
   .bg-blur .bg-circle {
     top: 30%;
+  }
+
+  .bg-blur .bg-circle._4 {
+    margin-top: 30%;
+    margin-right: 10%;
   }
 }
 
