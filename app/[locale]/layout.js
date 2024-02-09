@@ -5,6 +5,7 @@ import React, { useState, useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import { usePathname } from "next/navigation";
 import SplashScreen from "@/components/SplashScreen";
+import Hero from "@/components/Hero";
 
 export default function RootLayout({ children }) {
   const pathname = usePathname();
@@ -24,6 +25,7 @@ export default function RootLayout({ children }) {
         ) : (
           <>
             <Navbar />
+
             {children}
           </>
         )}

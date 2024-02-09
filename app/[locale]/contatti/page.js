@@ -1,6 +1,7 @@
 import React from "react";
 import TranslationsProvider from "@/components/TranslationsProvider";
 import initTranslations from "@/app/i18n";
+import Hero from "@/components/Hero";
 
 const i18nNamespaces = ["about", "test"];
 
@@ -13,7 +14,7 @@ async function Contatti({ params: { locale } }) {
       resources={resources}
     >
       <main>
-        <h1>Contatti</h1>
+        <Hero>Contatti </Hero>
       </main>
     </TranslationsProvider>
   );
