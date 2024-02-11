@@ -3,6 +3,7 @@ import initTranslations from "../i18n";
 import TranslationsProvider from "@/components/TranslationsProvider";
 const i18nNamespaces = ["home", "common"];
 import localFont from "next/font/local";
+import Marquee from "@/components/Marquee";
 const myFont = localFont({ src: "../../fonts/ClearfaceStd-Bold.woff" });
 const myFont2 = localFont({ src: "../../fonts/Sneak-Regular.ttf" });
 
@@ -30,6 +31,7 @@ export default async function Home({ params: { locale } }) {
               colpi di fulmine, brevi ma intensi, elettrizzanti e memorabili{" "}
             </p>
           </Hero>
+          <Marquee />
         </main>
       </TranslationsProvider>
     </>

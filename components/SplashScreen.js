@@ -4,9 +4,6 @@ const myFont = localFont({ src: "../fonts/Tactico-Grunge.otf" });
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import anime from "animejs";
-import Icona from "@/public/assets/logo/per.svg";
-import Per1 from "@/public/assets/logo/per1.svg";
-import Per2 from "@/public/assets/logo/per2.svg";
 const SplashScreen = ({ finishLoading }) => {
   const [isMounted, setIsMounted] = useState(false);
   const animate = () => {
@@ -126,7 +123,7 @@ const SplashScreen = ({ finishLoading }) => {
         <span>
           <Image
             id="icona"
-            src={Icona}
+            src="/assets/logo/per.svg"
             alt=""
             width={20}
             height={10}
@@ -140,7 +137,7 @@ const SplashScreen = ({ finishLoading }) => {
         className="flex items-center justify-center absolute top-1/2 left-1/5 translate-1/2"
       >
         <Image
-          src={Per1}
+          src="/assets/logo/per1.svg"
           alt=""
           width={100}
           height={100}
@@ -148,7 +145,7 @@ const SplashScreen = ({ finishLoading }) => {
           id="per1"
         />
         <Image
-          src={Per2}
+          src="/assets/logo/per2.svg"
           alt=""
           width={60}
           height={60}
