@@ -1,14 +1,17 @@
 import React from "react";
-import BlurryLights from "./BlurryLights";
+import BlurryLights from "./BlurryLights/BlurryLights";
+import Line from "./Line/Line";
 
 const Hero = ({ children }) => {
   return (
     <>
-      <div className="relative flex min-h-[calc(90vh_-_60px)] w-[90%] flex-col gap-6 md:gap-10  mx-auto items-center justify-center">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex min-h-[calc(90vh_-_60px)] w-[90%] flex-col gap-6 md:gap-10  mx-auto items-center justify-center">
         {children}
       </div>
-      <div className="w-[90%] mx-auto h-[0.5px] bg-white rounded-2"></div>
       <BlurryLights />
+      <div className="w-[90%] mx-auto">
+        <Line />
+      </div>
     </>
   );
 };

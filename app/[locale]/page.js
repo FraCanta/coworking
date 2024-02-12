@@ -4,6 +4,7 @@ import TranslationsProvider from "@/components/TranslationsProvider";
 const i18nNamespaces = ["home", "common"];
 import localFont from "next/font/local";
 import Marquee from "@/components/Marquee";
+import Line from "@/components/Line/Line";
 const myFont = localFont({ src: "../../fonts/ClearfaceStd-Bold.woff" });
 const myFont2 = localFont({ src: "../../fonts/Sneak-Regular.ttf" });
 
@@ -31,7 +32,19 @@ export default async function Home({ params: { locale } }) {
               colpi di fulmine, brevi ma intensi, elettrizzanti e memorabili{" "}
             </p>
           </Hero>
+          <div className="w-[90%] mx-auto flex justify-center items-center mt-10">
+            <h2 className="text-[32px]">
+              <span className={`${myFont.className} mr-2`}>Cofactory</span>
+              <span className={`${myFont2.className} text-pink`}>
+                lovers
+              </span>{" "}
+            </h2>
+          </div>
           <Marquee />
+          <div className="w-[90%] mx-auto">
+            <Line />
+          </div>
+          <div className="w-[90%] mx-auto h-screen">lavori</div>
         </main>
       </TranslationsProvider>
     </>

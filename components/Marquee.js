@@ -32,30 +32,30 @@ const Marquee = () => {
   const [hovered, setHovered] = useState(false);
   const controls = useAnimation();
 
-  useEffect(() => {
-    if (hovered) {
-      controls.stop();
-    } else {
-      controls.start({
-        x: [0, -1036],
-        transition: {
-          x: {
-            repeat: Infinity,
-            repeatType: "loop",
-            duration: 10,
-            ease: "linear",
-          },
-        },
-      });
-    }
-  }, [hovered]);
+  // useEffect(() => {
+  //   if (hovered) {
+  //     controls.stop();
+  //   } else {
+  //     controls.start({
+  //       x: [0, -1036],
+  //       transition: {
+  //         x: {
+  //           repeat: Infinity,
+  //           repeatType: "loop",
+  //           duration: 10,
+  //           ease: "linear",
+  //         },
+  //       },
+  //     });
+  //   }
+  // }, [hovered]);
 
   return (
     <motion.div
       style={{ whiteSpace: "nowrap", overflow: "hidden", position: "relative" }}
       className="w-[90%] mx-auto py-10"
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
+      // onMouseEnter={() => setHovered(true)}
+      // onMouseLeave={() => setHovered(false)}
     >
       {imagePaths.map((imagePath, index) => (
         <motion.img
@@ -63,7 +63,17 @@ const Marquee = () => {
           src={imagePath}
           alt={`Image ${index + 1}`}
           className="inline-block mr-[64px] w-[150px] h-[100px] object-contain"
-          animate={controls}
+          animate={{
+            x: hovered ? 0 : [0, -3000],
+            transition: {
+              x: {
+                repeat: hovered ? 0 : Infinity,
+                repeatType: "loop",
+                duration: 10,
+                ease: "linear",
+              },
+            },
+          }}
           custom={index} // Aggiungi un valore custom per distinguere le immagini
           transition={{ duration: 30, ease: "easeOut" }} // Transizione fluida durante la pausa
         />
