@@ -25,7 +25,7 @@ const BlurryLights = () => {
           "--offset": "180deg",
           "--speed": "10000ms",
           "--background":
-            "linear-gradient(#368b90, #bb5471, #368b90, #368b90);",
+            "linear-gradient(#bb5471, #bb5471, #368b90, #368b90);",
         }}
       ></div>
     </div>

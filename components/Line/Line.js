@@ -62,7 +62,7 @@ const Line = () => {
   };
   return (
     <div className={styles.line}>
-      {/* <div
+      <div
         onMouseEnter={() => {
           manageMouseEnter();
         }}
@@ -73,7 +73,7 @@ const Line = () => {
           manageMouseLeave();
         }}
         className={styles.box}
-      ></div> */}
+      ></div>
       <svg>
         <path ref={path}></path>
       </svg>

@@ -19,7 +19,7 @@
   fill: none;
 }
 
-/* .line .box {
+.line .box {
   height: 40px;
   width: 100%;
   position: relative;
@@ -30,4 +30,4 @@
 .line .box:hover {
   height: 500px;
   top: -250px;
-} */
+}

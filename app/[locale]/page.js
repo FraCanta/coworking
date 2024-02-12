@@ -21,7 +21,7 @@ export default async function Home({ params: { locale } }) {
         <main>
           <Hero>
             <h1
-              className={`${myFont.className} text-[60px] leading-[75px] lg:text-[120px] text-white lg:text-center lg:w-[70%] mx-auto lg:leading-[130px]`}
+              className={`${myFont.className} text-[60px] leading-[75px] lg:text-[120px] text-white lg:text-center lg:w-[70%] mx-auto lg:leading-[130px] `}
             >
               Sì. Siamo un’agenzia di incontri.
             </h1>
