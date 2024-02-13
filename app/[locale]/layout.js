@@ -4,8 +4,7 @@ import React, { useState, useEffect } from "react";
 
 import Navbar from "@/components/Navbar";
 import { usePathname } from "next/navigation";
-import SplashScreen from "@/components/SplashScreen";
-import Hero from "@/components/Hero";
+import { ThemeProvider } from "next-themes";
 
 export default function RootLayout({ children }) {
   const pathname = usePathname();
@@ -24,10 +23,13 @@ export default function RootLayout({ children }) {
           <SplashScreen finishLoading={() => setIsLoading(false)} />
         ) : ( */}
         <>
-          <Navbar />
+          <ThemeProvider attribute="class">
+            <Navbar />
 
-          {children}
+            {children}
+          </ThemeProvider>
         </>
+
         {/* )} */}
       </body>
     </html>

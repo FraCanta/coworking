@@ -13,6 +13,12 @@
   margin: 0;
 }
 
+@layer base {
+  body {
+    @apply dark:bg-white;
+  }
+}
+
 body {
   background-color: var(--background);
 }
@@ -129,10 +135,4 @@ a {
 
 .Main__Container-sc-1w4nyzp-0 .kzANES .es-main-container a {
   display: none !important;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
 }

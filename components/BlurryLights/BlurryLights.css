@@ -31,6 +31,7 @@
   --blur: 40px;
   filter: blur(var(--blur));
   width: 100%;
+
   display: grid;
   overflow: hidden;
 }
@@ -39,7 +40,7 @@
   grid-row: 1/-1;
 }
 
-@media screen and (max-width: 840px) {
+@media screen and (max-width: 850px) {
   .shape {
     scale: 3.5;
   }

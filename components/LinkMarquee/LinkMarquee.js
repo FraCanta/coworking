@@ -10,10 +10,10 @@ const LinkMarquee = () => {
         <div className={`${styles.content} ${myFont2.className}`}>
           <span className="text-second">tutte le storie</span>
           <span className="text-pink">tutte le storie</span>
-          <span>tutte le storie</span>
+          <span className="text-white dark:text-third">tutte le storie</span>
           <span className="text-second">tutte le storie</span>
           <span className="text-pink">tutte le storie</span>
-          <span>tutte le storie</span>
+          <span className="text-white dark:text-third">tutte le storie</span>
         </div>
       </div>
     </Link>

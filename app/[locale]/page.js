@@ -23,12 +23,12 @@ export default async function Home({ params: { locale } }) {
         <main>
           <Hero>
             <h1
-              className={`${myFont.className} text-[60px] leading-[75px] lg:text-[120px] text-white lg:text-center lg:w-[70%] mx-auto lg:leading-[130px] `}
+              className={`${myFont.className} text-[60px] leading-[75px] md:text-[90px] md:leading-[100px] md:w-[100%] lg:text-[120px] text-white dark:text-third md:text-center lg:w-[70%] mx-auto lg:leading-[130px] `}
             >
               Sì. Siamo un’agenzia di incontri.
             </h1>
             <p
-              className={`${myFont2.className} font-normal text-[20px] lg:text-[40px] text-white lg:text-center lg:w-[65%] mx-auto lg:leading-[59px]`}
+              className={`${myFont2.className} font-normal text-[20px] md:text-[30px] lg:text-[45px] text-white dark:text-third md:text-center lg:w-[65%] mx-auto lg:leading-[59px]`}
             >
               A volte creiamo legami duraturi. Altre volte, invece, nascono dei
               colpi di fulmine, brevi ma intensi, elettrizzanti e memorabili{" "}
@@ -36,10 +36,12 @@ export default async function Home({ params: { locale } }) {
           </Hero>
           <div className="w-[90%] mx-auto flex justify-center items-center mt-10">
             <h2 className="text-[32px]">
-              <span className={`${myFont.className} mr-2`}>Cofactory</span>
-              <span className={`${myFont2.className} text-pink`}>
-                lovers
-              </span>{" "}
+              <span
+                className={`${myFont.className} mr-2 text-white dark:text-third`}
+              >
+                Cofactory
+              </span>
+              <span className={`${myFont2.className} text-pink`}>lovers</span>{" "}
             </h2>
           </div>
           <Marquee />
