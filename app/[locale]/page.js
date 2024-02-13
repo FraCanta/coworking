@@ -5,6 +5,8 @@ const i18nNamespaces = ["home", "common"];
 import localFont from "next/font/local";
 import Marquee from "@/components/Marquee";
 import Line from "@/components/Line/Line";
+import LavoriSec from "@/components/LavoriSec/LavoriSec";
+import LinkMarquee from "@/components/LinkMarquee/LinkMarquee";
 const myFont = localFont({ src: "../../fonts/ClearfaceStd-Bold.woff" });
 const myFont2 = localFont({ src: "../../fonts/Sneak-Regular.ttf" });
 
@@ -44,7 +46,16 @@ export default async function Home({ params: { locale } }) {
           <div className="w-[90%] mx-auto">
             <Line />
           </div>
-          <div className="w-[90%] mx-auto h-screen">lavori</div>
+          <LavoriSec />
+          <div className="w-[90%] mx-auto">
+            <Line />
+          </div>
+          <div className="w-[90%] mx-auto overflow-hidden">
+            <LinkMarquee />
+          </div>
+          <div className="w-[90%] mx-auto mt-10">
+            <Line />
+          </div>
         </main>
       </TranslationsProvider>
     </>

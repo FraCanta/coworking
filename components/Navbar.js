@@ -15,7 +15,7 @@ const Navbar = () => {
         <div>
           <div className="flex items-center justify-between py-6 md:justify-start md:space-x-10">
             <div className="flex flex-1 justify-start lg:w-0">
-              <Link href="/">
+              <Link href="/" className="z-[9999]">
                 <Image
                   src={Logo}
                   alt="logo"
@@ -26,7 +26,7 @@ const Navbar = () => {
               </Link>
             </div>
 
-            <nav className="hidden space-x-10 md:flex">
+            <nav className="hidden space-x-10 md:flex z-[9999]">
               <Link
                 className={
                   pathname == "/factory"
@@ -36,6 +36,16 @@ const Navbar = () => {
                 href="/factory"
               >
                 Factory
+              </Link>
+              <Link
+                className={
+                  pathname == "/works"
+                    ? "text-base font-bold text-neutral-100 hover:text-neutral-200"
+                    : "text-base font-semibold text-neutral-100 hover:text-neutral-300"
+                }
+                href="/works"
+              >
+                Works
               </Link>
 
               <Link
@@ -51,6 +61,8 @@ const Navbar = () => {
             </nav>
           </div>
         </div>
+      </div>
+      <div className="w-[90vw] mx-auto">
         <Line />
       </div>
     </>

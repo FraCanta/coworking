@@ -20,15 +20,15 @@ export default function RootLayout({ children }) {
   return (
     <html>
       <body>
-        {isLoading && isHome ? (
+        {/* {isLoading && isHome ? (
           <SplashScreen finishLoading={() => setIsLoading(false)} />
-        ) : (
-          <>
-            <Navbar />
+        ) : ( */}
+        <>
+          <Navbar />
 
-            {children}
-          </>
-        )}
+          {children}
+        </>
+        {/* )} */}
       </body>
     </html>
   );

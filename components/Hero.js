@@ -9,7 +9,7 @@ const Hero = ({ children }) => {
         {children}
       </div>
       <BlurryLights />
-      <div className="w-[90%] mx-auto">
+      <div className="w-[90vw] mx-auto">
         <Line />
       </div>
     </>

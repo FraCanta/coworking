@@ -15,7 +15,7 @@ const Line = () => {
   }, []);
 
   const setPath = (progress) => {
-    const width = window.innerWidth * 0.7;
+    const width = window.innerWidth * 0.9;
     path.current.setAttributeNS(
       null,
       "d",
