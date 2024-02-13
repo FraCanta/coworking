@@ -8,7 +8,10 @@ const BlurryLights = () => {
     //   <div class="bg-circle _3"></div>
     //   <div class="bg-circle _4"></div>
     // </div>
-    <div className="blur-container" style={{ "--blur": "12vw" }}>
+    <div
+      className="blur-container min-h-[calc(90vh_-_60px)]"
+      style={{ "--blur": "12vw" }}
+    >
       <div
         className="shape"
         style={{

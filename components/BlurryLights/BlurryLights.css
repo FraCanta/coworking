@@ -30,7 +30,6 @@
 .blur-container {
   --blur: 40px;
   filter: blur(var(--blur));
-  height: 100vh;
   width: 100%;
   display: grid;
   overflow: hidden;
