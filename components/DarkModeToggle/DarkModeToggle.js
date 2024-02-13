@@ -11,9 +11,9 @@ const DarkModeToggle = () => {
       className="z-[999]"
     >
       {theme === "light" ? (
-        <RiSunLine width={30} className="text-white" />
+        <RiSunLine width={30} className="text-white w-6 h-6" />
       ) : (
-        <RiMoonLine width={30} className="dark:text-third" />
+        <RiMoonLine width={30} className="dark:text-third w-6 h-6" />
       )}
     </button>
   );
