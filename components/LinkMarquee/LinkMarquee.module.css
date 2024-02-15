@@ -28,3 +28,15 @@
     left: -100%;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .marquee {
+    font-size: 10vw;
+
+    height: 12vw;
+  }
+
+  .marquee span {
+    width: 40%;
+  }
+}

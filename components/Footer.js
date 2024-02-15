@@ -22,7 +22,7 @@ function Footer() {
           </span>
         </div>
         <div className="text-[1.625rem]"></div>
-        <div className="text-[1.625rem] grid grid-cols-1 gap-6">
+        <div className="text-[1.25rem] 2xl:text-[1.625rem] grid grid-cols-1 gap-6">
           Ideiamo, progettiamo e realizziamo campagne di comunicazione congiunta
           tra i brand, sulle box ma non solo.
           <div className="flex gap-4">
@@ -48,7 +48,7 @@ function Footer() {
             </li>
           </ul>
         </div>
-        <div className="order-last md:order-none">© 2024</div>
+        <div className="order-last lg:order-none">© 2024</div>
         <div></div>
         <div>Privacy Policy</div>
         <div></div>
