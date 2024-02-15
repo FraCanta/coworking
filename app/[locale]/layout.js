@@ -5,6 +5,7 @@ import React, { useState, useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import { usePathname } from "next/navigation";
 import { ThemeProvider } from "next-themes";
+import Footer from "@/components/Footer";
 
 export default function RootLayout({ children }) {
   const pathname = usePathname();
@@ -27,6 +28,7 @@ export default function RootLayout({ children }) {
             <Navbar />
 
             {children}
+            <Footer />
           </ThemeProvider>
         </>
 
