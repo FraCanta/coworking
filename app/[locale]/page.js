@@ -27,12 +27,15 @@ export default async function Home({ params: { locale } }) {
             >
               Sì. Siamo un’agenzia di incontri.
             </h1>
-            <p
-              className={`${myFont2.className} font-normal text-[20px] md:text-[30px]  text-white dark:text-third md:text-center lg:w-[65%] mx-auto 2xl:text-[30px]`}
-            >
-              A volte creiamo legami duraturi. Altre volte, invece, nascono dei
-              colpi di fulmine, brevi ma intensi, elettrizzanti e memorabili.
-            </p>
+            <div className="lg:w-[65%] mx-auto">
+              <p
+                className={`${myFont2.className} font-normal text-[20px] md:text-[30px]  text-white dark:text-third md:text-center  2xl:text-[30px]`}
+              >
+                A volte creiamo legami duraturi. Altre volte, invece, nascono
+                dei colpi di fulmine, brevi ma intensi, elettrizzanti e
+                memorabili.
+              </p>
+            </div>
           </Hero>
           <div className="w-[90%] mx-auto flex justify-center items-center mt-10">
             <h2 className="text-[32px]">

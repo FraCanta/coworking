@@ -136,3 +136,11 @@ a {
 .Main__Container-sc-1w4nyzp-0 .kzANES .es-main-container a {
   display: none !important;
 }
+
+.lineMask {
+  overflow: hidden;
+}
+
+.lineMask p {
+  margin: 0px;
+}

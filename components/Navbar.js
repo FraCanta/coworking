@@ -8,7 +8,11 @@ import Image from "next/image";
 import DarkModeToggle from "./DarkModeToggle/DarkModeToggle";
 import { MenuButton } from "./MenuButton";
 import Line from "./Line/Line";
-
+const myFont = localFont({ src: "../fonts/ClearfaceStd-Bold.woff" });
+import localFont from "next/font/local";
+import SocialBar from "./SocialBar";
+import { MaskText } from "./maskText";
+const myFont2 = localFont({ src: "../fonts/Sneak-Regular.ttf" });
 const Navbar = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollTop, setLastScrollTop] = useState(0);
@@ -83,30 +87,53 @@ const Navbar = () => {
           transition={{ ease: "easeOut", duration: 0.4 }}
           className="absolute top-0 left-0 right-0 bottom-0 flex items-center w-full h-screen bg-third dark:bg-white text-white dark:text-third"
         >
-          <div className="w-[90%] mx-auto grid grid-cols-1 lg:grid-cols-3">
-            <ul className="h-full flex flex-col gap-6">
-              <li
-                onClick={() => setOpen(false)}
-                className="text-[4rem] lg:text-[8rem] cursor-pointer transition hover:text-gray-500"
-              >
-                <Link href="/factory">Factory</Link>
+          <div className="w-[90%] mx-auto grid grid-cols-1 lg:grid-cols-2 mt-[50px] md:mt-[100px] gap-y-10">
+            <ul
+              className={`${myFont.className} h-full flex flex-col justify-between`}
+            >
+              <li onClick={() => setOpen(false)}>
+                <Link
+                  href="/factory"
+                  className="text-[15vw] lg:text-[8vw] cursor-pointer transition hover:text-second max-w-max "
+                >
+                  Factory
+                </Link>
               </li>
               <li
                 onClick={() => setOpen(false)}
-                className="text-[4rem] lg:text-[8rem] cursor-pointer transition hover:text-gray-500"
+                className="text-[15vw] lg:text-[8vw] cursor-pointer transition hover:text-pink  max-w-max"
               >
-                <Link href="/works">Works</Link>
+                <Link href="/works"> Works</Link>
               </li>
               <li
                 onClick={() => setOpen(false)}
-                className="text-[4rem] lg:text-[8rem] cursor-pointer transition hover:text-gray-500"
+                className="text-[15vw] lg:text-[8vw] cursor-pointer transition hover:text-second  max-w-max"
               >
-                <Link href="/contatti">Contact</Link>
+                <Link href="/contatti"> Contact</Link>
               </li>
             </ul>
-            <div></div>
-            <div>Frase</div>
+            {/* <div></div> */}
+            <div className="h-full flex flex-col justify-between gap-y-10">
+              <MaskText>
+                <p
+                  className={`${myFont2.className} font-normal text-[20px] md:text-[2.2vw]  text-white dark:text-third `}
+                >
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                  eget erat ac est tristique mollis. Etiam ultrices augue vel
+                  lacus molestie scelerisque ut at massa.{" "}
+                </p>
+              </MaskText>
+              <SocialBar />
+            </div>
           </div>
+          {/* <div className="absolute bottom-0 right-0 md:right-10  h-2/3 w-full md:w-1/2 object-cover md:object-contain">
+            <Image
+              src="/assets/logo/iconabg.png"
+              alt="Icona di sfondo"
+              layout="fill"
+              quality={75}
+            />
+          </div> */}
         </motion.div>
       </div>
       <div className="w-[90vw] mx-auto">
