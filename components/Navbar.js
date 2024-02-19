@@ -38,8 +38,15 @@ const Navbar = () => {
 
   return (
     <motion.div
-      style={{ display: isVisible ? "block " : "none" }}
-      className="fixed left-0 top-0 w-full z-10 ease-in duration-300"
+      style={{
+        y: isVisible ? "0%" : "-100%",
+        transition: {
+          duration: 0.8,
+          ease: "linear",
+          delay: isVisible ? 0 : 0.8,
+        }, // Aggiunto il delay
+      }}
+      className="fixed left-0 top-0 w-full z-10 ease-in duration-300 backdrop-blur-sm"
     >
       <div className="w-[90%] m-auto flex justify-between items-center py-4 text-white">
         <Link href="/" className="z-[20]" onClick={() => setOpen(false)}>
@@ -51,16 +58,16 @@ const Navbar = () => {
             className="w-[130px] lg:w-[200px] "
           />
         </Link>
-        <div className="flex gap-4 items-center">
+        <div className="flex gap-8 items-center">
           <DarkModeToggle />
           <div
             onClick={() => setOpen(!isOpen)}
-            className="block ease-in duration-300 z-20"
+            className="block ease-in duration-300 z-20 cursor-pointer"
           >
             <MenuButton
               isOpen={isOpen}
               onClick={() => setOpen(!isOpen)}
-              strokeWidth="4"
+              strokeWidth="3"
               className="stroke-white dark:stroke-third"
               transition={{ ease: "easeOut", duration: 0.2 }}
               width="40"
@@ -71,9 +78,9 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         <motion.div
-          initial={{ opacity: 0, x: "-100%" }}
-          animate={{ opacity: isOpen ? 1 : 0, x: isOpen ? "0%" : "-100%" }}
-          transition={{ ease: "easeOut", duration: 0.8 }}
+          initial={{ opacity: 0, y: "-100%" }}
+          animate={{ opacity: isOpen ? 1 : 0, y: isOpen ? "0%" : "-100%" }}
+          transition={{ ease: "easeOut", duration: 0.4 }}
           className="absolute top-0 left-0 right-0 bottom-0 flex items-center w-full h-screen bg-third dark:bg-white text-white dark:text-third"
         >
           <div className="w-[90%] mx-auto grid grid-cols-1 lg:grid-cols-3">
