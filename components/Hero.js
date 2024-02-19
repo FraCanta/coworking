@@ -3,7 +3,6 @@
 import React from "react";
 import BlurryLights from "./BlurryLights/BlurryLights";
 import Line from "./Line/Line";
-import { MaskText } from "./maskText";
 
 const Hero = ({ children }) => {
   return (
