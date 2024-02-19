@@ -3,6 +3,7 @@
   font-size: 40px;
   max-width: 1280px;
   flex-wrap: wrap;
+  line-height: 1.2;
 }
 
 .paragraph .word {
