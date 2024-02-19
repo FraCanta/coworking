@@ -75,7 +75,7 @@ const Line = () => {
         className={styles.box}
       ></div>
       <svg>
-        <path ref={path} className="dark:stroke-third"></path>
+        <path ref={path} className="dark:stroke-third stroke-white"></path>
       </svg>
     </div>
   );

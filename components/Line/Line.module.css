@@ -13,7 +13,6 @@
 }
 
 .line svg path {
-  stroke: white;
   stroke-width: 1px;
   fill: none;
 }

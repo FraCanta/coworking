@@ -37,6 +37,9 @@ export default async function Home({ params: { locale } }) {
               </p>
             </div>
           </Hero>
+          <div className="w-[90vw] mx-auto">
+            <Line />
+          </div>
           <div className="w-[90%] mx-auto flex justify-center items-center mt-10">
             <h2 className="text-[32px]">
               <span

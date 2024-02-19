@@ -38,13 +38,13 @@ function Footer() {
         <div className="text-[1.625rem]">
           <ul className="flex flex-col gap-4">
             <li>
-              <Link href="/">Works</Link>
+              <Link href="/works">Works</Link>
             </li>{" "}
             <li>
-              <Link href="/">Factory</Link>
+              <Link href="/factory">Factory</Link>
             </li>{" "}
             <li>
-              <Link href="/">Contatti</Link>
+              <Link href="/contatti">Contatti</Link>
             </li>
           </ul>
         </div>

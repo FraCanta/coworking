@@ -2,7 +2,6 @@
 
 import React from "react";
 import BlurryLights from "./BlurryLights/BlurryLights";
-import Line from "./Line/Line";
 
 const Hero = ({ children }) => {
   return (
@@ -11,9 +10,6 @@ const Hero = ({ children }) => {
         {children}
       </div>
       <BlurryLights />
-      <div className="w-[90vw] mx-auto">
-        <Line />
-      </div>
     </>
   );
 };

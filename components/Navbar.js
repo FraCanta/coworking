@@ -89,9 +89,7 @@ const Navbar = () => {
           className="absolute top-0 left-0 right-0 bottom-0 flex items-center w-full h-screen bg-third dark:bg-white text-white dark:text-third"
         >
           <div className="w-[90%] mx-auto grid grid-cols-1 lg:grid-cols-2 mt-[50px] md:mt-[100px] gap-y-10">
-            <ul
-              className={`${myFont.className} h-full flex flex-col justify-between`}
-            >
+            <ul className={`${myFont.className} h-full flex flex-col`}>
               <li onClick={() => setOpen(false)}>
                 <Link
                   href="/factory"
