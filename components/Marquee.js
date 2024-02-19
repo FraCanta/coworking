@@ -56,7 +56,7 @@ const Marquee = () => {
         whiteSpace: "nowrap",
         overflow: "hidden",
         position: "relative",
-        zIndex: "999",
+        zIndex: "6",
       }}
       className="w-[90%] mx-auto py-10"
       onMouseEnter={() => setHovered(true)}

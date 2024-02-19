@@ -6,7 +6,7 @@ import localFont from "next/font/local";
 const LinkMarquee = () => {
   return (
     <Link href="/works">
-      <div class={styles.marquee}>
+      <div className={styles.marquee}>
         <div className={`${styles.content} ${myFont2.className}`}>
           <span className="text-second">tutte le storie</span>
           <span className="text-pink">tutte le storie</span>

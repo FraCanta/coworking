@@ -1,99 +1,116 @@
 "use client";
 
 import Link from "next/link";
-import React, { useState } from "react";
-import { usePathname } from "next/router"; // Changed from "next/navigation"
-import Image from "next/image";
-import Logo from "@/public/assets/logo/logo.svg";
+import React, { useState, useEffect } from "react";
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import { IoMenuOutline } from "react-icons/io5";
+import { RiCloseFill } from "react-icons/ri";
 import Line from "./Line/Line";
+import Logo from "@/public/assets/logo/logo.svg";
+import Image from "next/image";
 import DarkModeToggle from "./DarkModeToggle/DarkModeToggle";
-import { MdOutlineMenu } from "react-icons/md";
-import { motion } from "framer-motion";
-
+import { MenuButton } from "./MenuButton";
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false); // State to track menu open/close
-  // const pathname = usePathname();
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-    console.log(isOpen);
+  const [nav, setNav] = useState(false);
+  const [color, setColor] = useState("transparent");
+  // const [textColor, setTextColor] = useState("white");
+  const [isOpen, setOpen] = useState(false);
+  const handleNav = () => {
+    setNav(!nav);
   };
 
+  useEffect(() => {
+    const changeColor = () => {
+      if (window.scrollY >= 90) {
+        setColor("#ffffff");
+        // setTextColor("#000000");
+      } else {
+        setColor("transparent");
+        // setTextColor("#ffffff");
+      }
+    };
+    window.addEventListener("scroll", changeColor);
+  }, []);
+
   return (
-    <>
-      <div className="h-[60px] w-[90%] mx-auto ">
-        <div>
-          <div className="flex items-center justify-between mt-8  md:space-x-10">
-            <div className="flex flex-1 justify-start lg:w-0">
-              <Link href="/" className="z-[20]">
-                <Image
-                  src={Logo}
-                  alt="logo"
-                  width={200}
-                  height={200}
-                  className="w-[130px] lg:w-[200px] "
-                />
-              </Link>
-            </div>
-            <div className="flex gap-6 items-center">
-              <DarkModeToggle />
-              <MdOutlineMenu
-                className="dark:text-third text-white w-8 h-8 lg:w-12 lg:h-12 cursor-pointer z-[20] relative"
-                onClick={toggleMenu} // Toggle menu on click
+    <div
+      style={{ backgroundColor: `${color}` }}
+      className="fixed left-0 top-0 w-full z-10 ease-in duration-300"
+    >
+      <div className="w-[90%] m-auto flex justify-between items-center p-4 text-white">
+        <Link href="/" className="z-[20]">
+          <Image
+            src={Logo}
+            alt="logo"
+            width={200}
+            height={200}
+            className="w-[130px] lg:w-[200px] "
+          />
+        </Link>
+        <div className="flex gap-4 items-center">
+          <DarkModeToggle />
+          <div onClick={handleNav} className="block ease-in duration-300 z-20">
+            {/* {nav ? (
+              <RiCloseFill
+                size={40}
+                className="text-white dark:text-third cursor-pointer "
               />
-            </div>
+            ) : (
+              <IoMenuOutline
+                size={40}
+                className="text-white dark:text-third cursor-pointer ease-in duration-300"
+              />
+            )} */}
+            <MenuButton
+              isOpen={isOpen}
+              onClick={() => setOpen(!isOpen)}
+              strokeWidth="4"
+              className="stroke-white dark:stroke-third"
+              transition={{ ease: "easeOut", duration: 0.2 }}
+              width="40"
+              height="20"
+            />
           </div>
-          {/* Mobile menu */}
-          <motion.div
-            initial={{ opacity: 0, y: -50 }}
-            animate={{ opacity: isOpen ? 1 : 0, y: isOpen ? 0 : -50 }}
-            transition={{ duration: 0.3 }}
-            className={`flex flex-col space-y-4 absolute text-white top-0 left-0 bg-third h-screen w-full z-[30] ${
-              isOpen ? "block" : "hidden"
-            }`}
-          >
-            <motion.nav className="flex flex-col w-[90%] mx-auto pt-10 pb-6 h-full ">
-              <Link
-                // className={
-                //   pathname == "/factory"
-                //     ? "text-base font-bold text-white dark:text-third hover:text-second"
-                //     : "text-base font-semibold text-white dark:text-third hover:text-second"
-                // }
-                href="/factory"
-                className="text-9xl"
+        </div>
+
+        {/* Mobile Menu */}
+        <div
+          className={
+            nav
+              ? "absolute top-0 left-0 right-0 bottom-0 flex items-center w-full h-screen bg-third dark:bg-white text-white dark:text-third  ease-in duration-300"
+              : "absolute top-0 left-[-100%] right-0 bottom-0 flex items-center w-full h-screen bg-third dark:bg-white text-white dark:text-third  ease-in duration-300 z-20"
+          }
+        >
+          <div className="w-[90%] mx-auto grid grid-cols-1 lg:grid-cols-3">
+            <ul className="h-full flex flex-col gap-6">
+              <li
+                onClick={handleNav}
+                className="text-[4rem] lg:text-[8rem] cursor-pointer transition hover:text-gray-500"
               >
-                Factory
-              </Link>
-              <Link
-                // className={
-                //   pathname == "/works"
-                //     ? "text-base font-bold text-white dark:text-third hover:text-second"
-                //     : "text-base font-semibold text-white dark:text-third hover:text-second"
-                // }
-                href="/works"
-                className="text-9xl"
+                <Link href="/factory">Factory</Link>
+              </li>
+              <li
+                onClick={handleNav}
+                className="text-[4rem] lg:text-[8rem] cursor-pointer transition hover:text-gray-500"
               >
-                Works
-              </Link>
-              <Link
-                // className={
-                //   pathname == "/contatti"
-                //     ? "text-base font-bold text-white dark:text-third hover:text-second"
-                //     : "text-base font-semibold text-white dark:text-third hover:text-second"
-                // }
-                href="/contatti"
-                className="text-9xl"
+                <Link href="/works">Works</Link>
+              </li>
+              <li
+                onClick={handleNav}
+                className="text-[4rem] lg:text-[8rem] cursor-pointer transition hover:text-gray-500"
               >
-                Contatti
-              </Link>
-            </motion.nav>
-          </motion.div>
+                <Link href="/contatti">Contact</Link>
+              </li>
+            </ul>
+            <div></div>
+            <div>Frase</div>
+          </div>
         </div>
       </div>
       <div className="w-[90vw] mx-auto">
         <Line />
       </div>
-    </>
+    </div>
   );
 };
 

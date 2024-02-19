@@ -2,12 +2,6 @@ import React from "react";
 import "./BlurryLights.css";
 const BlurryLights = () => {
   return (
-    // <div class="bg-blur">
-    //   <div class="bg-circle _1"></div>
-    //   <div class="bg-circle _2"></div>
-    //   <div class="bg-circle _3"></div>
-    //   <div class="bg-circle _4"></div>
-    // </div>
     <div
       className="blur-container h-[calc(90vh_-_60px)]"
       style={{ "--blur": "12vw" }}
