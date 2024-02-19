@@ -6,7 +6,7 @@ import Line from "@/components/Line/Line";
 import Paragraph from "@/components/Paragraph/Paragraph";
 const myFont = localFont({ src: "../../../fonts/ClearfaceStd-Bold.woff" });
 const myFont2 = localFont({ src: "../../../fonts/Sneak-Regular.ttf" });
-
+import { TbRectangleVerticalFilled } from "react-icons/tb";
 const i18nNamespaces = ["about", "test"];
 const paragraph =
   "Aenean pulvinar fringilla elementum. Pellentesque mollis ipsum id libero posuere feugiat. Donec eget arcu sit amet nulla luctus venenatis a sit amet lectus. Maecenas justo massa, venenatis eu aliquam vel, molestie sit amet nulla.";
@@ -43,13 +43,43 @@ async function Factory({ params: { locale } }) {
             <div></div>
             <Paragraph paragraph={paragraph} />
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 w-[90%] mx-auto">
-            <div></div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 w-[90%] mx-auto gap-y-6">
+            <div>
+              <h2
+                className={`${myFont.className} text-[25px] dark:text-third text-white uppercase flex items-center gap-1`}
+              >
+                <TbRectangleVerticalFilled className="text-pink" /> Values
+              </h2>
+            </div>
             <Paragraph paragraph={paragraph} />
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 w-[90%] mx-auto">
-            <div></div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 w-[90%] mx-auto gap-y-6">
+            <div>
+              {" "}
+              <h2
+                className={`${myFont.className} text-[25px] dark:text-third text-white uppercase flex items-center gap-1`}
+              >
+                <TbRectangleVerticalFilled className="text-second" /> Green
+                Passion
+              </h2>
+            </div>
             <Paragraph paragraph={paragraph} />
+          </div>
+          <div className="w-[90%] mx-auto">
+            <Line />
+          </div>
+        </div>
+        <div className="w-[90%] mt-8 mx-auto flex flex-col gap-6 py-14">
+          <h2
+            className={`${myFont.className} text-white dark:text-third uppercase text-[25px]`}
+          >
+            Parlano di noi
+          </h2>
+          <div className="w-full h-full justify-start items-start gap-[67px] flex overflow-x-hidden">
+            <div className="w-[425px] h-[565px] bg-[#D9D9D9]" />
+            <div className="w-[425px] h-[565px] bg-[#D9D9D9]" />
+            <div className="w-[425px] h-[565px] bg-[#D9D9D9]" />
+            <div className="w-[425px] h-[565px] bg-[#D9D9D9]" />
           </div>
         </div>
       </main>
