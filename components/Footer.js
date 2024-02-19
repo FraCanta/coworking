@@ -1,7 +1,9 @@
 import Link from "next/link";
 import React from "react";
 import localFont from "next/font/local";
+import { PiArrowUpRightThin } from "react-icons/pi";
 const myFont = localFont({ src: "../fonts/Tactico-Grunge.otf" });
+const myFont2 = localFont({ src: "../fonts/ClearfaceStd-Bold.woff" });
 
 function Footer() {
   return (
@@ -38,21 +40,38 @@ function Footer() {
         <div className="text-[1.625rem]">
           <ul className="flex flex-col gap-4">
             <li>
-              <Link href="/works">Works</Link>
+              <Link href="/factory">Factory</Link>
             </li>{" "}
             <li>
-              <Link href="/factory">Factory</Link>
+              <Link href="/works">Works</Link>
             </li>{" "}
             <li>
               <Link href="/contatti">Contatti</Link>
             </li>
           </ul>
         </div>
-        <div className="order-last lg:order-none">© 2024</div>
+        <div className="order-last lg:order-none flex items-end">© 2024</div>
         <div></div>
-        <div>Privacy Policy</div>
+        <div className="flex items-end">Privacy Policy</div>
         <div></div>
-        <div>Socials Link</div>
+        <div
+          className={`${myFont2.className} flex gap-8 text-[6vw] lg:text-[1.5vw] flex items-end`}
+        >
+          <Link
+            href="https://www.google.com/"
+            className="flex gap-1 items-center"
+            target="_blank"
+          >
+            Linkedin <PiArrowUpRightThin />
+          </Link>
+          <Link
+            href="https://www.google.com/"
+            className="flex gap-1 items-center"
+            target="_blank"
+          >
+            Instagram <PiArrowUpRightThin />
+          </Link>
+        </div>
       </div>
     </div>
   );
