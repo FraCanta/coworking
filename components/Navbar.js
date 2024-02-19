@@ -11,7 +11,8 @@ import Line from "./Line/Line";
 const myFont = localFont({ src: "../fonts/ClearfaceStd-Bold.woff" });
 import localFont from "next/font/local";
 import SocialBar from "./SocialBar";
-import { MaskText } from "./maskText";
+import { MaskText } from "./MaskText";
+
 const myFont2 = localFont({ src: "../fonts/Sneak-Regular.ttf" });
 const Navbar = () => {
   const [isVisible, setIsVisible] = useState(true);
