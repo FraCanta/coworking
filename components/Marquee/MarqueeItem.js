@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useEffect, useState } from "react";
 
@@ -28,7 +29,7 @@ const imagePaths = [
   "/assets/logos/logo22.png",
 ];
 
-const Marquee = () => {
+const MarqueeItem = () => {
   const [hovered, setHovered] = useState(false);
   const controls = useAnimation();
 
@@ -49,7 +50,6 @@ const Marquee = () => {
       });
     }
   }, [hovered]);
-
   return (
     <motion.div
       style={{
@@ -77,4 +77,4 @@ const Marquee = () => {
   );
 };
 
-export default Marquee;
+export default MarqueeItem;

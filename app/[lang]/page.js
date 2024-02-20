@@ -1,13 +1,45 @@
 import Hero from "@/components/Hero";
 import localFont from "next/font/local";
-import Marquee from "@/components/Marquee";
+import Marquee from "@/components/Marquee/Marquee";
 import Line from "@/components/Line/Line";
 import LavoriSec from "@/components/LavoriSec/LavoriSec";
 import LinkMarquee from "@/components/LinkMarquee/LinkMarquee";
 const myFont = localFont({ src: "../../fonts/ClearfaceStd-Bold.woff" });
 const myFont2 = localFont({ src: "../../fonts/Sneak-Regular.ttf" });
+import { getDictionary } from "../../getDictionary";
+import MarqueeItem from "@/components/Marquee/MarqueeItem";
 
-export default async function Home({ params: { locale } }) {
+export default async function Home({ params }) {
+  const translation = await getDictionary(params.lang);
+  console.log(typeof translation.home.marquee);
+  const arr = translation.home.marquee;
+
+  const imagePaths = [
+    "/assets/logos/logo.png",
+    "/assets/logos/logo2.png",
+    "/assets/logos/logo3.png",
+    "/assets/logos/logo4.png",
+    "/assets/logos/logo5.png",
+    "/assets/logos/logo6.png",
+    "/assets/logos/logo7.png",
+    "/assets/logos/logo8.png",
+    "/assets/logos/logo9.png",
+    "/assets/logos/logo10.png",
+    "/assets/logos/logo11.png",
+    "/assets/logos/logo12.png",
+    "/assets/logos/logo13.png",
+    "/assets/logos/logo14.png",
+    "/assets/logos/logo15.png",
+    "/assets/logos/logo16.png",
+    "/assets/logos/logo17.png",
+    "/assets/logos/logo18.png",
+    "/assets/logos/logo19.png",
+    "/assets/logos/logo20.png",
+    "/assets/logos/logo21.png",
+    "/assets/logos/logo22.png",
+  ];
+
+  console.log(imagePaths);
   return (
     <>
       <main>
@@ -39,7 +71,8 @@ export default async function Home({ params: { locale } }) {
             <span className={`${myFont2.className} text-pink`}>lovers</span>{" "}
           </h2>
         </div>
-        <Marquee />
+
+        <Marquee translation={translation} />
         <div className="w-[90%] mx-auto">
           <Line />
         </div>

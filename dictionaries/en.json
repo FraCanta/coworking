@@ -1,0 +1,30 @@
+{
+  "home": {
+    "marquee": {
+      "imagePaths ": [
+        "/assets/logos/logo.png",
+        "/assets/logos/logo2.png",
+        "/assets/logos/logo3.png",
+        "/assets/logos/logo4.png",
+        "/assets/logos/logo5.png",
+        "/assets/logos/logo6.png",
+        "/assets/logos/logo7.png",
+        "/assets/logos/logo8.png",
+        "/assets/logos/logo9.png",
+        "/assets/logos/logo10.png",
+        "/assets/logos/logo11.png",
+        "/assets/logos/logo12.png",
+        "/assets/logos/logo13.png",
+        "/assets/logos/logo14.png",
+        "/assets/logos/logo15.png",
+        "/assets/logos/logo16.png",
+        "/assets/logos/logo17.png",
+        "/assets/logos/logo18.png",
+        "/assets/logos/logo19.png",
+        "/assets/logos/logo20.png",
+        "/assets/logos/logo21.png",
+        "/assets/logos/logo22.png"
+      ]
+    }
+  }
+}
