@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 import { ThemeProvider } from "next-themes";
 import Footer from "@/components/Footer";
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children, params }) {
   const pathname = usePathname();
   const isHome = pathname === "/";
   const [isLoading, setIsLoading] = useState(isHome);
@@ -17,8 +17,9 @@ export default function RootLayout({ children }) {
       return;
     }
   }, [isLoading]);
+  console.log(params);
   return (
-    <html>
+    <html lang={params.lang}>
       <body>
         {/* {isLoading && isHome ? (
           <SplashScreen finishLoading={() => setIsLoading(false)} />
